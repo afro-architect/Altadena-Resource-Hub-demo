@@ -61,31 +61,25 @@ input[type=submit] {
   padding: 20px;
 }
 
-.row {
-  display: flex;
-  gap: 24px; /* space between columns */
-  flex-wrap: wrap; /* allows wrapping on small screens */
+      @media screen and (max-width: 600px) {
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust 180px as needed */
+  gap: 16px; /* Space between images */
 }
 
-.column {
-  flex: 1 1 0;
-  min-width: 200px; /* adjust as needed for responsiveness */
-
-}
-
-@media screen and (max-width: 600px) {
-  .row {
-    flex-direction: column;
-    gap: 0;
-  }
-.square-img {
+.gallery-grid img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain; /* or cover */
-  object-position: top;
-  background: #eee;
+  aspect-ratio: 1 / 1;           /* Makes each image a square */
+  object-fit: contain;           /* Shows entire image, may letterbox */
+  background: #eee;              /* Fills empty space */
   display: block;
 }
+
+
+
+  }
+
 
     </style>
 </head>
@@ -152,21 +146,17 @@ The Hub was created to bring together the services, resources, and information t
         <div class="col-12 col-sm-10 col-md-8 col-lg-6">
             <h2 style="float:center;">Types of Assistance Available</h2>    
 <!-- Photo Grid -->
-<div class="row">
-  <div class="column">
-    <img src="images/rebuild.png" class="square-img w-100 d-block mx-auto" style="background:#eee; margin-bottom:16px;">
-    <img src="images/mutual-aid.png" class="square-img w-100 d-block mx-auto" style="background:#eee; margin-bottom:16px;">
-    <img src="images/health.png" class="square-img w-100 d-block mx-auto" style="background:#eee; margin-bottom:16px;">
-    <img src="images/relocation_assistance.png" class="square-img w-100 d-block mx-auto" style="background:#eee; margin-bottom:16px;">
-    <img src="images/lawyer.png" class="square-img w-100 d-block mx-auto" style="background:#eee;">
-  </div>
-  <div class="column">
-    <img src="images/sell.png" class="square-img w-100 d-block mx-auto" style="background:#eee; margin-bottom:16px;">
-    <img src="images/architect.png" class="square-img w-100 d-block mx-auto" style="background:#eee; margin-bottom:16px;">
-    <img src="images/mental-health.png" class="square-img w-100 d-block mx-auto" style="background:#eee; margin-bottom:16px;">
-    <img src="images/fa-fema.png" class="square-img w-100 d-block mx-auto" style="background:#eee; margin-bottom:16px;">
-    <img src="images/relocation_assistance.png" class="square-img w-100 d-block mx-auto" style="background:#eee;">
-  </div>
+<div class="gallery-grid">
+  <img src="images/rebuild.png" alt="">
+  <img src="images/mutual-aid.png" alt="">
+  <img src="images/health.png" alt="">
+  <img src="images/relocation_assistance.png" alt="">
+  <img src="images/lawyer.png" alt="">
+  <img src="images/sell.png" alt="">
+  <img src="images/architect.png" alt="">
+  <img src="images/mental-health.png" alt="">
+  <img src="images/fa-fema.png" alt="">
+  <img src="images/relocation_assistance.png" alt="">
 </div>
 
 </div>
