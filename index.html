@@ -66,6 +66,9 @@ input[type=submit] {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust 180px as needed */
   gap: 16px; /* Space between images */
+  padding: 24px 0;    /* adds 24px at the top and bottom of the grid */
+  max-width: 1000px;   /* or whatever fits your layout */
+  margin: 40px auto;  /* centers the grid and adds space above/below */
 }
 
 .gallery-grid img {
